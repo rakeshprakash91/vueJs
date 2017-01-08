@@ -26,8 +26,8 @@ new Vue({
         },
         pHeal: function () {
             if (this.pScore < 300) {
-                this.pScore = this.pScore + Math.ceil(Math.random() * 100) + 5 - (Math.ceil(Math.random() * 100 / 2));
-                this.mScore = this.mScore - Math.ceil(Math.random() * 100) + 3;
+                this.pScore = this.pScore + Math.ceil(Math.random() * 100) + 50 - (Math.ceil(Math.random() * 100 / 2));
+                this.mScore = this.mScore - Math.ceil(Math.random() * 100) + 30;
             }
             this.checkStatus()
         },
