@@ -1,0 +1,59 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    border: 1px solid darkgray;
+    margin: 10px;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    text-align: center;
+}
+
+li div {
+    border: 1px solid darkgray;
+    width: 400px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.action {
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+span {
+    display: inline-block;
+}
+
+.score {
+    width: 420px;
+}
+
+.giveUp {
+    background-color: orange;
+}

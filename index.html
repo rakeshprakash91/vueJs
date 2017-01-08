@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vuejs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <section id="app">
+        <h1 style="text-align : center " v-if="gameOver">{{winner}}</h1>
+        <ul>
+            <li>
+                <h1 v-once>{{You}}</h1>
+                <section class="score">
+                    <div :class="{green : pScore> 200, red : pScore < 200 }" :style="pBgStyle()" style="color : white; align-text : center; vertical-align : middle">
+                        {{Math.ceil(pScore/4)}}
+                    </div>
+                </section>
+
+            </li>
+            <li>
+                <h1 v-once>{{Monster}}</h1>
+                <section class="score">
+                    <div :class="{green : mScore> 200, red : mScore < 200 }" :style="mBgStyle()" style="color : white; align-text : center; vertical-align : middle">
+                        {{Math.ceil(mScore/4)}}
+                    </div>
+                </section>
+
+            </li>
+        </ul>
+
+
+        <section>
+            <ul v-if="!isNewGame">
+                <li class="action red" @click="pAttack()">Attack</li>
+                <li class="action green" @click="pHeal" v-if="showHeal">Heal</li>
+                <li class="action giveUp" @click="newGame">Give Up</li>
+            </ul>
+            <ul v-if="isNewGame">
+                <li class="action giveUp" @click="newGame">New Game</li>
+            </ul>
+        </section>
+    </section>
+
+
+
+    <script src="script/vue.min.js"></script>
+    <script src="script/app.js"></script>
+</body>
+
+</html>
