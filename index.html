@@ -12,7 +12,7 @@
         <h1 style="text-align : center " v-if="gameOver">{{winner}}</h1>
         <ul>
             <li>
-                <h1 v-once>{{You}}</h1>
+                <h1 v-once>{{you}}</h1>
                 <section class="score">
                     <div :class="{green : pScore> 200, red : pScore < 200 }" :style="pBgStyle()" style="color : white; align-text : center; vertical-align : middle">
                         {{Math.ceil(pScore/4)}}
@@ -21,7 +21,7 @@
 
             </li>
             <li>
-                <h1 v-once>{{Monster}}</h1>
+                <h1 v-once>{{monster}}</h1>
                 <section class="score">
                     <div :class="{green : mScore> 200, red : mScore < 200 }" :style="mBgStyle()" style="color : white; align-text : center; vertical-align : middle">
                         {{Math.ceil(mScore/4)}}

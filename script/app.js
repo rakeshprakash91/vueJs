@@ -1,8 +1,8 @@
 new Vue({
     el: "#app",
     data: {
-        You: "You",
-        Monster: "Monster",
+        you: "You",
+        monster: "Monster",
         mScore: 400,
         pScore: 400,
         isNewGame: true,
@@ -51,7 +51,7 @@ new Vue({
         checkStatus: function () {
             if (this.pScore <= 200 || this.mScore <= 200) {
                 if (this.pScore > this.mScore) {
-                    this.winner = "Player Wins!!!"
+                    this.winner = "You Win!!!"
                 } else if (this.pScore < this.mScore) {
                     this.winner = "Monster Wins!!!"
                 } else {
